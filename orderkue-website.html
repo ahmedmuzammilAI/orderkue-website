@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>orderkue — KueBot (Your Personalised Customer Service Agent on WhatsApp)</title>
+  <meta name="description" content="orderkue brings KueBot — your personalized AI agent on WhatsApp. Share your WhatsApp number and catalog, and KueBot helps customers discover products, ask questions, and place orders. Includes a live orders dashboard for your business." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
+    .glass { backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); }
+    .ring-soft { box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.08) inset; }
+    .shadow-soft { box-shadow: 0 12px 34px rgba(2, 6, 23, 0.10); }
+  </style>
+</head>
+
+<body class="bg-slate-50 text-slate-900">
+  <!-- Background -->
+  <div class="pointer-events-none fixed inset-0 -z-10">
+    <div class="absolute -top-52 left-1/2 h-[560px] w-[920px] -translate-x-1/2 rounded-full bg-gradient-to-r from-emerald-200 via-sky-200 to-violet-200 blur-3xl opacity-70"></div>
+  </div>
+
+  <!-- NAV -->
+  <header class="sticky top-0 z-50">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="mt-4 rounded-2xl bg-white/75 glass ring-soft shadow-soft">
+        <div class="flex items-center justify-between px-4 py-3 sm:px-6">
+          <a href="#top" class="flex items-center gap-2">
+            <div class="h-9 w-9 rounded-xl bg-slate-900 text-white grid place-items-center font-extrabold">ok</div>
+            <div class="leading-tight">
+              <div class="font-extrabold tracking-tight">orderkue</div>
+              <div class="text-xs text-slate-500 -mt-0.5">Order on WhatsApp</div>
+            </div>
+          </a>
+
+          <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+            <a href="#KueBot" class="hover:text-slate-900">KueBot</a>
+            <a href="#features" class="hover:text-slate-900">Features</a>
+            <a href="#how" class="hover:text-slate-900">How it works</a>
+            <a href="#usecases" class="hover:text-slate-900">Use cases</a>
+            <a href="#faq" class="hover:text-slate-900">FAQ</a>
+            <a href="#contact" class="hover:text-slate-900">Contact</a>
+          </nav>
+
+          <a href="#contact" class="inline-flex rounded-xl bg-slate-900 px-4 py-2 text-sm font-semibold text-white hover:bg-slate-800">
+            Get started
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main id="top">
+    <section class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14 pb-10">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <div class="inline-flex items-center gap-2 rounded-full bg-white/75 glass ring-soft px-3 py-1.5 text-xs font-semibold text-slate-700">
+            <span class="inline-flex h-2 w-2 rounded-full bg-emerald-500"></span>
+            Human-centered. Simple. Built for real businesses.
+          </div>
+
+          <h1 class="mt-5 text-4xl sm:text-5xl font-extrabold tracking-tight">
+            Meet <span class="text-slate-900">KueBot</span> —
+            <span class="block">Your Personalised Customer Service Agent on WhatsApp.</span>
+          </h1>
+
+          <p class="mt-4 text-lg text-slate-600 max-w-xl">
+            <span class="font-semibold text-slate-900">KueBot</span> is deployed on your WhatsApp business account and becomes your
+            personalized customer service + sales agent. <span class="font-semibold text-slate-900">Your customers can talk to your business like they're talking to a friend on WhatsApp.</span>
+            Kuebot knows your catalog, answers questions, suggests the right products, and helps customers place orders —
+            all in a natural chat. 
+          </p>
+
+          <div class="mt-6 grid sm:grid-cols-3 gap-3 max-w-xl">
+            <div class="rounded-2xl bg-white/75 glass ring-soft p-4">
+              <div class="text-sm font-bold">Personalized help</div>
+              <div class="text-xs text-slate-500 mt-1">Like a real staff member in chat</div>
+            </div>
+            <div class="rounded-2xl bg-white/75 glass ring-soft p-4">
+              <div class="text-sm font-bold">Smart suggestions</div>
+              <div class="text-xs text-slate-500 mt-1">Recommends based on user preferences</div>
+            </div>
+            <div class="rounded-2xl bg-white/75 glass ring-soft p-4">
+              <div class="text-sm font-bold">Fast setup</div>
+              <div class="text-xs text-slate-500 mt-1">WhatsApp + catalog</div>
+            </div>
+          </div>
+
+          <div class="mt-6 flex flex-col sm:flex-row gap-3">
+            <a href="#contact" class="inline-flex items-center justify-center rounded-xl bg-slate-900 px-5 py-3 text-sm font-semibold text-white hover:bg-slate-800">
+              Get KueBot on my WhatsApp
+            </a>
+            <a href="#KueBot" class="inline-flex items-center justify-center rounded-xl bg-white/75 glass ring-soft px-5 py-3 text-sm font-semibold text-slate-900 hover:bg-white">
+              What KueBot can do
+            </a>
+          </div>
+
+          <p class="mt-4 text-xs text-slate-500">
+            Works for retail, services, home businesses, and restaurants — anywhere customers already message you on WhatsApp.
+          </p>
+        </div>
+
+        <!-- Simple visual -->
+        <div class="relative">
+          <div class="absolute -inset-3 rounded-[28px] bg-white/40 blur-xl"></div>
+          <div class="relative rounded-[28px] bg-white/75 glass ring-soft shadow-soft overflow-hidden">
+            <div class="px-5 py-4 border-b border-slate-200/70 flex items-center justify-between">
+              <div class="text-sm font-bold">KueBot chat preview</div>
+              <span class="text-xs font-semibold text-slate-500">example</span>
+            </div>
+
+            <div class="p-5 space-y-3">
+              <div class="max-w-[85%] rounded-2xl bg-slate-100 px-4 py-3">
+                <div class="text-sm font-semibold">KueBot</div>
+                <div class="mt-1 text-sm text-slate-700">
+                  Hi! What are you looking for today?
+                </div>
+                <div class="mt-2 text-xs text-slate-500">
+                  Tell me your budget, size, color, or use-case — I’ll suggest the best options.
+                </div>
+              </div>
+
+              <div class="ml-auto max-w-[85%] rounded-2xl bg-slate-900 text-white px-4 py-3">
+                I need something under $50 for a gift.
+              </div>
+
+              <div class="max-w-[85%] rounded-2xl bg-slate-100 px-4 py-3">
+                <div class="text-sm text-slate-700">
+                  Great choice. Here are 3 popular options from this store:
+                </div>
+                <div class="mt-2 grid gap-2 text-xs">
+                  <div class="rounded-xl bg-white px-3 py-2 ring-soft">Option A — $39 • Best seller</div>
+                  <div class="rounded-xl bg-white px-3 py-2 ring-soft">Option B — $45 • Premium look</div>
+                  <div class="rounded-xl bg-white px-3 py-2 ring-soft">Option C — $29 • Budget friendly</div>
+                </div>
+              </div>
+
+              <div class="rounded-2xl bg-white ring-soft p-4">
+                <div class="text-xs font-bold text-slate-500">LIVE ORDERS DASHBOARD</div>
+                <div class="mt-2 flex items-center justify-between">
+                  <div>
+                    <div class="text-sm font-bold">New order ready to confirm</div>
+                    <div class="text-xs text-slate-500">Clear summary • One tap</div>
+                  </div>
+                  <div class="flex gap-2">
+                    <button class="rounded-xl bg-emerald-600 px-3 py-2 text-xs font-bold text-white">Accept</button>
+                    <button class="rounded-xl bg-slate-100 px-3 py-2 text-xs font-bold text-slate-800">Reject</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-xs text-slate-500">
+                You stay in control: KueBot chats + collects details, you approve.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- KueBot -->
+    <section id="KueBot" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+      <div class="rounded-3xl bg-white/75 glass ring-soft shadow-soft p-6 sm:p-10">
+        <div class="max-w-2xl">
+          <h2 class="text-3xl font-extrabold tracking-tight">KueBot is your personalized AI for customers</h2>
+          <p class="mt-3 text-slate-600">
+            It’s not just “order taking”. KueBot helps customers choose the right thing — like a helpful staff member who never gets tired.
+          </p>
+        </div>
+
+        <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="rounded-3xl bg-white ring-soft p-6">
+            <div class="font-bold text-lg">Understands customer needs</div>
+            <p class="mt-2 text-sm text-slate-600">KueBot asks simple questions (budget, size, use-case) to guide people faster.</p>
+          </div>
+          <div class="rounded-3xl bg-white ring-soft p-6">
+            <div class="font-bold text-lg">Suggests products/services</div>
+            <p class="mt-2 text-sm text-slate-600">Shows the best options from your catalog — with clear choices.</p>
+          </div>
+          <div class="rounded-3xl bg-white ring-soft p-6">
+            <div class="font-bold text-lg">Answers questions instantly</div>
+            <p class="mt-2 text-sm text-slate-600">Stock, pricing, availability, timings, delivery/pickup — handled in chat.</p>
+          </div>
+          <div class="rounded-3xl bg-white ring-soft p-6">
+            <div class="font-bold text-lg">Collects order details</div>
+            <p class="mt-2 text-sm text-slate-600">KueBot collects customer info, notes, address, and payment preference.</p>
+          </div>
+          <div class="rounded-3xl bg-white ring-soft p-6">
+            <div class="font-bold text-lg">Keeps customers updated</div>
+            <p class="mt-2 text-sm text-slate-600">Automatic messages for confirmation and status updates.</p>
+          </div>
+          <div class="rounded-3xl bg-white ring-soft p-6">
+            <div class="font-bold text-lg">At your customers' fingertips</div>
+            <p class="mt-2 text-sm text-slate-600">No fancy app, Clear language, quick options, minimal steps — built for real businesses.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-extrabold tracking-tight">Everything stays simple for the business</h2>
+        <p class="mt-3 text-slate-600">
+          You don’t need to learn a complicated tool. You get a clean Live Orders Dashboard and KueBot does the chat work.
+        </p>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="rounded-3xl bg-white/75 glass ring-soft shadow-soft p-6">
+          <div class="text-lg font-bold">Live Orders Dashboard</div>
+          <ul class="mt-3 text-sm text-slate-600 space-y-2">
+            <li>All new orders/requests in one place</li>
+            <li>Accept / reject in one tap</li>
+            <li>Clear customer details and notes</li>
+            <li>Status tracking from start to finish</li>
+          </ul>
+        </div>
+
+        <div class="rounded-3xl bg-white/75 glass ring-soft shadow-soft p-6">
+          <div class="text-lg font-bold">Easy setup</div>
+          <ul class="mt-3 text-sm text-slate-600 space-y-2">
+            <li>Share your WhatsApp number</li>
+            <li>Share your product list/menu/catalog</li>
+            <li>We set KueBot up for your business</li>
+            <li>Edit anytime</li>
+          </ul>
+        </div>
+
+        <div class="rounded-3xl bg-white/75 glass ring-soft shadow-soft p-6">
+          <div class="text-lg font-bold">Delivery / Pickup (optional)</div>
+          <ul class="mt-3 text-sm text-slate-600 space-y-2">
+            <li>Delivery or pickup supported</li>
+            <li>Address + notes collected by KueBot</li>
+            <li>Simple customer updates</li>
+            <li>No extra customer apps</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- USE CASES -->
+    <section id="usecases" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-extrabold tracking-tight">Works for any business</h2>
+        <p class="mt-3 text-slate-600">If customers message you on WhatsApp, KueBot can help.</p>
+      </div>
+
+      <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="rounded-3xl bg-white/75 glass ring-soft shadow-soft p-6">
+          <div class="font-bold">Retail stores</div>
+          <p class="mt-2 text-sm text-slate-600">Help customers find the right product and order fast.</p>
+        </div>
+        <div class="rounded-3xl bg-white/75 glass ring-soft shadow-soft p-6">
+          <div class="font-bold">Services</div>
+          <p class="mt-2 text-sm text-slate-600">Collect requests, details, and bookings in chat.</p>
+        </div>
+        <div class="rounded-3xl bg-white/75 glass ring-soft shadow-soft p-6">
+          <div class="font-bold">Home businesses</div>
+          <p class="mt-2 text-sm text-slate-600">Turn WhatsApp customers into structured orders.</p>
+        </div>
+        <div class="rounded-3xl bg-white/75 glass ring-soft shadow-soft p-6">
+          <div class="font-bold">Restaurants & cafés</div>
+          <p class="mt-2 text-sm text-slate-600">Take dine-in and at-home orders through the same WhatsApp agent.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
+      <div class="max-w-2xl">
+        <h2 class="text-3xl font-extrabold tracking-tight">FAQ</h2>
+      </div>
+
+      <div class="mt-8 grid lg:grid-cols-2 gap-6">
+        <details class="rounded-3xl bg-white/75 glass ring-soft shadow-soft p-6">
+          <summary class="cursor-pointer font-bold">Do customers need an app?</summary>
+          <p class="mt-3 text-sm text-slate-600">No. Customers stay on WhatsApp. KueBot chats with them there.</p>
+        </details>
+
+        <details class="rounded-3xl bg-white/75 glass ring-soft shadow-soft p-6">
+          <summary class="cursor-pointer font-bold">What do I need to start?</summary>
+          <p class="mt-3 text-sm text-slate-600">Just your WhatsApp number and your catalog/menu. We set KueBot up.</p>
+        </details>
+
+        <details class="rounded-3xl bg-white/75 glass ring-soft shadow-soft p-6">
+          <summary class="cursor-pointer font-bold">Do I still control the order?</summary>
+          <p class="mt-3 text-sm text-slate-600">Yes. KueBot collects details and suggests options. You confirm on the dashboard.</p>
+        </details>
+
+        <details class="rounded-3xl bg-white/75 glass ring-soft shadow-soft p-6">
+          <summary class="cursor-pointer font-bold">Can KueBot suggest products?</summary>
+          <p class="mt-3 text-sm text-slate-600">Yes. KueBot can recommend items from your catalog based on what the customer needs.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16">
+      <div class="rounded-3xl bg-white/75 glass ring-soft shadow-soft p-6 sm:p-10">
+        <div class="grid lg:grid-cols-2 gap-10 items-start">
+          <div>
+            <h2 class="text-3xl font-extrabold tracking-tight">Get KueBot for your business</h2>
+            <p class="mt-3 text-slate-600">
+              Share your WhatsApp number + catalog/menu and we’ll deploy your personalized KueBot.
+            </p>
+            <div class="mt-5 grid gap-3 text-sm text-slate-600">
+              <div class="rounded-2xl bg-white ring-soft p-4">
+                <div class="font-bold text-slate-900">What to send us</div>
+                <ul class="mt-2 space-y-1">
+                  <li>• Your WhatsApp number</li>
+                  <li>• Your catalog/menu (photo / PDF / CSV / list)</li>
+                  <li>• Any rules (delivery, pickup, timings, etc.)</li>
+                </ul>
+              </div>
+              <div class="rounded-2xl bg-white ring-soft p-4">
+                <div class="font-bold text-slate-900">What you get</div>
+                <ul class="mt-2 space-y-1">
+                  <li>• KueBot (AI agent) on WhatsApp</li>
+                  <li>• Live Orders Dashboard</li>
+                  <li>• Simple customer updates</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="rounded-3xl bg-slate-900 text-white p-6">
+            <div class="text-sm font-bold">Quick contact form</div>
+            <p class="mt-2 text-sm text-white/80">This is front-end only (replace with your backend later).</p>
+
+            <form id="leadForm" class="mt-4 grid gap-3">
+              <input required name="name" class="rounded-xl bg-white/10 ring-1 ring-white/20 px-4 py-3 text-sm placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white/60" placeholder="Your name" />
+              <input required name="business" class="rounded-xl bg-white/10 ring-1 ring-white/20 px-4 py-3 text-sm placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white/60" placeholder="Business name" />
+              <input required name="phone" class="rounded-xl bg-white/10 ring-1 ring-white/20 px-4 py-3 text-sm placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white/60" placeholder="WhatsApp / phone" />
+              <textarea name="message" rows="3" class="rounded-xl bg-white/10 ring-1 ring-white/20 px-4 py-3 text-sm placeholder:text-white/40 focus:outline-none focus:ring-2 focus:ring-white/60" placeholder="Optional message (what do you sell? what should KueBot help with?)"></textarea>
+
+              <button type="submit" class="inline-flex items-center justify-center rounded-xl bg-white px-4 py-3 text-sm font-semibold text-slate-900 hover:bg-slate-100">
+                Request setup
+              </button>
+              <p id="formNote" class="text-xs text-white/70">We’ll reply with next steps.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-slate-200/70">
+      <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <div class="h-10 w-10 rounded-2xl bg-slate-900 text-white grid place-items-center font-extrabold">ok</div>
+            <div>
+              <div class="font-extrabold">orderkue</div>
+              <div class="text-sm text-slate-500">KueBot — Your Personalised Customer Service Agent on WhatsApp.</div>
+            </div>
+          </div>
+          <div class="text-sm text-slate-500">© <span id="year"></span> orderkue</div>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Demo-only form handler
+    const leadForm = document.getElementById("leadForm");
+    const formNote = document.getElementById("formNote");
+
+    leadForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const payload = Object.fromEntries(new FormData(leadForm).entries());
+      console.log("Lead:", payload);
+      formNote.textContent = "Thanks! We received your details. (Demo: check console.)";
+      leadForm.reset();
+      setTimeout(() => (formNote.textContent = "We’ll reply with next steps."), 3500);
+    });
+  </script>
+</body>
+</html>
